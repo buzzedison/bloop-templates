@@ -59,7 +59,7 @@ export default function CTA() {
             </div>
             <h3 className="text-2xl font-bold mb-4">Customizable</h3>
             <p className="text-gray-600">
-              Easily customize our components to match your project's unique design and requirements.
+              Easily customize our components to match your project&apos;s unique design and requirements.
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-lg p-8 text-center">
