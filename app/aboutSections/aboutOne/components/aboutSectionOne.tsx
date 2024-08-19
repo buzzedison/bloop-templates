@@ -102,7 +102,7 @@ const AboutSectionOne: React.FC = () => {
       <section className="bg-blue-700 text-white py-20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8">Let's work together to achieve extraordinary results.</p>
+          <p className="text-xl mb-8">Let&apos;s work together to achieve extraordinary results.</p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
