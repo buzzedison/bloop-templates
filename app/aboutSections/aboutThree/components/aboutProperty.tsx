@@ -5,27 +5,35 @@ import { motion } from 'framer-motion';
 
 const AboutPropertyTrust: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-900 to-purple-800 text-white">
+    <div className="bg-black text-white">
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/property-trust-hero.jpg"
             alt="Property Trust Hero"
             layout="fill"
             objectFit="cover"
-            className="opacity-30"
+            className="opacity-60"
           />
         </div>
-        <div className="relative z-10 flex items-center justify-center h-full">
+        <div className="relative z-10 text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="text-6xl md:text-8xl font-extrabold tracking-wider text-center"
+            className="text-6xl md:text-8xl font-extrabold tracking-wider mb-8"
           >
             PROPERTY TRUST
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
+            className="text-2xl md:text-3xl font-light tracking-wider"
+          >
+            Redefining Real Estate Excellence
+          </motion.p>
         </div>
       </section>
 
@@ -38,12 +46,12 @@ const AboutPropertyTrust: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: 'easeOut' }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">About Property Trust</h2>
+              <h2 className="text-5xl md:text-6xl font-bold mb-8">About Us</h2>
               <p className="text-xl leading-relaxed mb-8">
-                Property Trust is a premier real estate company dedicated to redefining the industry through innovation, expertise, and unparalleled service. Our team of seasoned professionals is committed to helping clients navigate the complex world of real estate with ease and confidence.
+                At Property Trust, we are passionate about revolutionizing the real estate industry. With our innovative approach, cutting-edge technology, and unrivaled expertise, we empower our clients to make informed decisions and achieve their real estate goals with confidence.
               </p>
               <p className="text-xl leading-relaxed">
-                With a focus on building long-term relationships and delivering exceptional results, we strive to be your trusted partner in all your real estate endeavors. Whether you're looking to buy, sell, or invest, Property Trust is here to guide you every step of the way.
+                Our team of seasoned professionals is dedicated to providing personalized service and delivering exceptional results. We take pride in building long-lasting relationships based on trust, transparency, and integrity.
               </p>
             </motion.div>
             <motion.div 
@@ -65,7 +73,7 @@ const AboutPropertyTrust: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-32 px-4 md:px-0 bg-gradient-to-r from-purple-800 to-blue-900">
+      <section className="py-32 px-4 md:px-0 bg-gradient-to-r from-blue-900 to-purple-800">
         <div className="container mx-auto max-w-7xl">
           <motion.h2 
             initial={{ opacity: 0, y: 50 }}
@@ -75,11 +83,12 @@ const AboutPropertyTrust: React.FC = () => {
           >
             Our Services
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {[
-              { title: "Residential", description: "Find your dream home with our extensive portfolio of luxury properties and personalized service." },
-              { title: "Commercial", description: "Discover lucrative investment opportunities in the commercial real estate market with our expert guidance." },
-              { title: "Property Management", description: "Maximize your property's potential with our comprehensive management services and cutting-edge technology." }
+              { title: "Residential", description: "Discover your dream home among our curated selection of luxury properties. Our personalized approach ensures a seamless and rewarding experience." },
+              { title: "Commercial", description: "Unlock the potential of commercial real estate with our expert guidance. We help you identify and capitalize on lucrative investment opportunities." },
+              { title: "Property Management", description: "Maximize your property's value and minimize your stress with our comprehensive management services. We leverage advanced technology to optimize performance." },
+              { title: "Real Estate Consulting", description: "Gain a competitive edge with our strategic consulting services. Our team provides valuable insights and tailored solutions to help you navigate the complex real estate landscape." }
             ].map((service, index) => (
               <motion.div 
                 key={index}
@@ -96,8 +105,40 @@ const AboutPropertyTrust: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Testimonials Section */}
       <section className="py-32 px-4 md:px-0">
+        <div className="container mx-auto max-w-7xl">
+          <motion.h2 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className="text-5xl md:text-6xl font-bold mb-16 text-center"
+          >
+            What Our Clients Say
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+            {[
+              { name: "John Doe", testimonial: "Property Trust exceeded my expectations. Their expertise and dedication made the process of finding my dream home a breeze. I couldn't be happier with the result!" },
+              { name: "Jane Smith", testimonial: "As a real estate investor, I've worked with many companies, but none compare to Property Trust. Their market insights and strategic advice have been invaluable in growing my portfolio." },
+              { name: "Michael Johnson", testimonial: "I entrusted my property management to Property Trust, and it was the best decision I made. Their attention to detail, responsiveness, and innovative solutions have maximized my returns and given me peace of mind." }
+            ].map((testimonial, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: index * 0.2, ease: 'easeOut' }}
+                className="bg-gradient-to-r from-blue-900 to-purple-800 p-10 rounded-lg shadow-lg"
+              >
+                <p className="text-lg leading-relaxed mb-4 italic">{testimonial.testimonial}</p>
+                <p className="text-xl font-bold">{testimonial.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 px-4 md:px-0 bg-gradient-to-r from-purple-800 to-blue-900">
         <div className="container mx-auto max-w-7xl text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 50 }}
@@ -105,7 +146,7 @@ const AboutPropertyTrust: React.FC = () => {
             transition={{ duration: 1, ease: 'easeOut' }}
             className="text-5xl md:text-6xl font-bold mb-8"
           >
-            Experience the Property Trust Difference
+            Elevate Your Real Estate Experience
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 50 }}
@@ -113,7 +154,7 @@ const AboutPropertyTrust: React.FC = () => {
             transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
             className="text-xl leading-relaxed mb-12"
           >
-            Ready to elevate your real estate experience? Contact us today to discuss your needs and let us exceed your expectations.
+            Join the Property Trust revolution and unlock the true potential of your real estate journey. Contact us today to schedule a consultation and discover how we can help you achieve your goals.
           </motion.p>
           <motion.a
             href="/contact"
@@ -121,7 +162,7 @@ const AboutPropertyTrust: React.FC = () => {
             whileTap={{ scale: 0.9 }}
             className="inline-block bg-white text-purple-800 px-12 py-4 rounded-full font-bold text-lg uppercase tracking-wider hover:bg-purple-100 transition duration-300"
           >
-            Get in Touch
+            Get Started
           </motion.a>
         </div>
       </section>
