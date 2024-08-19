@@ -11,8 +11,11 @@ const AboutFashionSection: React.FC = () => {
         <Image
           src="/images/aboutSection/fashion-about-hero.jpeg"
           alt="About Us Fashion Hero"
-          layout="fill"
-          objectFit="cover"
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover"
+          }}
           className="opacity-60"
         />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -63,8 +66,9 @@ const AboutFashionSection: React.FC = () => {
               <Image
                 src="/images/aboutSection/fashion-artisans.jpeg"
                 alt="Empowering Artisans"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: 'cover' }}
                 className="rounded-lg shadow-lg"
               />
             </motion.div>
