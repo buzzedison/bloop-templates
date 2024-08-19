@@ -3,7 +3,7 @@
 // app/components/page.tsx
 
 import Link from 'next/link';
-import components from './ComponentData';
+import components from './componentData';
 
 export default function ComponentGrid() {
   return (
